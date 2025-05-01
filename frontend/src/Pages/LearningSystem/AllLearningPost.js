@@ -19,7 +19,7 @@ function AllLearningPost() {
         setPosts(response.data);
         setFilteredPosts(response.data); // Initially show all posts
       } catch (error) {
-        console.error('Error fetching posts:', error);
+        console.error('Error fetching Learning posts:', error);
       }
     };
 
@@ -48,7 +48,7 @@ function AllLearningPost() {
     if (confirmDelete) {
       try {
         await axios.delete(`http://localhost:8080/learningSystem/${id}`);
-        alert('Post deleted successfully!');
+        alert('Learning Post deleted successfully!');
         setFilteredPosts(filteredPosts.filter((post) => post.id !== id)); // Update the list after deletion
       } catch (error) {
         console.error('Error deleting post:', error);
@@ -64,7 +64,7 @@ function AllLearningPost() {
   const handleLike = async (postId) => {
     const userID = localStorage.getItem('userID');
     if (!userID) {
-      alert('Please log in to like a post.');
+      alert('Please log in to system like a post.');
       return;
     }
     try {
