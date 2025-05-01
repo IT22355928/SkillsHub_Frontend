@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, Routes, Navigate } from "react-router";
-import { useNavigate } from "react-router-dom";
+import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import AddLeariningPost from "./Pages/LearningSystem/AddLeariningPost";
 import AllLearningPost from "./Pages/LearningSystem/AllLearningPost";
 import UpdateLearningPost from "./Pages/LearningSystem/UpdateLearningPost";
