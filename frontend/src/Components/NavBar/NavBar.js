@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaUserGraduate, FaSearch } from "react-icons/fa";
+import { FaUserGraduate, FaSearch, FaRobot } from "react-icons/fa"; // Added FaRobot
 import { MdNotifications, MdNotificationsActive } from "react-icons/md";
 import { IoLogOut } from "react-icons/io5";
 import { IoMdSettings } from "react-icons/io";
@@ -66,6 +66,12 @@ function NavBar() {
                     </div>
                     
                     <div className='nav_bar_item'>
+                        <FaRobot
+                            className='nav_item_icon'
+                            onClick={() => (window.location.href = '/chatbot')}
+                            title="Chat Support"
+                        />
+                        
                         <div className="notification-icon-container">
                             {unreadCount > 0 ? (
                                 <>

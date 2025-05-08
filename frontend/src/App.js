@@ -15,7 +15,7 @@ import NotificationsPage from "./Pages/NotificationManagement/NotificationsPage"
 import AddNewPost from "./Pages/PostManagement/AddNewPost";
 import AllPost from "./Pages/PostManagement/AllPost";
 import UpdatePost from "./Pages/PostManagement/UpdatePost";
-import { Homepage } from "react-icons/si";
+import Chatbot from "./Components/NavBar/ChatBot";
 
 function ProtectedRoute({ children }) {
   const userID = localStorage.getItem("userID");
@@ -148,6 +148,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <UpdatePost />
+              </ProtectedRoute>
+            }
+          />
+  
+          <Route
+            path="/chatbot"
+            element={
+              <ProtectedRoute>
+                <Chatbot />
               </ProtectedRoute>
             }
           />
